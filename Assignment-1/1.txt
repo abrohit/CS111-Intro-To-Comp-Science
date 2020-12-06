@@ -1,0 +1,42 @@
+a). The inputs would be the five numbers. (number_one, number_two, number_three, number_four, number_five)
+
+b). The output would be the largest number. In my program, I just display the input of the largest number.
+
+c). An error would arise if the user inputted strings instead of an integer. 
+
+d).
+READ number_one
+READ number_two
+READ number_three
+READ number_four
+READ number_five
+
+IF number_one>=number_two and number_one>=number_three and number_one>=number_four and number_one>=number_five THEN
+ DISPLAY number_one
+ELSE
+ IF number_two>=number_one and number_two>=number_three and number_two>=number_four and number_two>=number_five THEN
+  DISPLAY number_two
+ ELSE
+  IF number_three>=number_one and number_three>=number_two and number_three>=number_four and number_three>=number_five THEN
+    DISPLAY number_three
+  ELSE
+   IF number_four>=number_one and number_four>=number_two and number_four>=number_three and number_four>=number_five THEN
+    DISPLAY number_four
+   ELSE
+    IF number_five>=number_one and number_five>=number_two and number_five>=number_three and number_five>=number_four THEN
+     DISPLAY number_five
+    ENDIF
+   ENDIF
+  ENDIF
+ ENDIF
+ENDIF
+HALT
+
+e). Test Case 1 = [1,2,3,4,5]
+    Test Case 2 = [-5,0,4,3,2]
+    Test Case 3 = [3,3,3,3,3]
+    Test Case 4 = [100000, 4050494, 747474, 4949389, 474738]
+    Test Case 5 = ['a','b','c','d','e']
+
+f). Minimum number of operations would be 10.
+g). Maximum number of operations would be 27.
