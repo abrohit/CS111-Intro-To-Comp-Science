@@ -1,0 +1,50 @@
+a). Inputs would be 'code'. The variable 'code' stores the EAN-13 code.
+
+b). Output would be 'Accept' or 'Reject' based on the outcome of the variable 'code' entered.
+
+c). Some errors would be entering more or less than 13 digit codes, entering a string or double instead of integers.
+
+d). For this algorithm I will use EAN-13.
+
+READ code
+
+SET Task_one_code TO code
+SET Task_two_code TO code
+
+FOR count=0 to 13:
+ COMPUTE digit AS (int(Task_one_code)) % 10
+ COMPUTE Task_one_code AS int(Task_one_code/10)
+ IF (count % 2) == 0 then
+  COMPUTE sum_of_even_digit AS sum_of_digit + digit
+ ENDIF
+ENDFOR
+ 
+COMPUTE Task_one as sum_of_even_digit % 10
+
+FOR count=0 to 13:
+ COMPUTE digit AS (int(Task_two_code)) % 10
+ COMPUTE Task_two_code AS int(Task_two_code/10)
+ IF (count % 2) != 0 then
+  COMPUTE sum_of_odd_digit AS sum_of digit + digit
+ ENDIF
+ENDFOR
+
+COMPUTE Task_two AS sum_of_odd_digit % 10
+
+COMPUTE Task_three AS (Task_two * 3) % 10
+
+COMPUTE Task_four AS (Task_one + Task_three) % 10
+
+IF Task_four == 0 then
+ DISPLAY Accept
+ELSE
+ DISPLAY Reject
+ENDIF
+
+e). Test Case 1=[8904117400758]
+    Test Case 2=[ajoidjaop]
+    Test Case 3=[465363728219]
+
+f). 129(59 + 59 + 11=129) number of operations. 59 for task one loop. 59 for task two loop. 11 for other operations.
+
+g). 129(59 + 59 + 11=129) number of operations. 59 for task one loop. 59 for task two loop. 9 for other operations.
