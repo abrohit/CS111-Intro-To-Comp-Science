@@ -1,6 +1,6 @@
 # CS111 Intro To Comp Science Rutgers
 
-Course Grade: 
+Course Grade: TBD
 
 Professor Lars Sorenson
 
